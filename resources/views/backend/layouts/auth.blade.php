@@ -56,7 +56,6 @@
 
 <!-- append theme customizer -->
 <script src="{{asset('assets/lib/js-cookie/js.cookie.js')}}"></script>
-<script src="{{asset('assets/js/dashforge.settings.js')}}"></script>
 
 </body>
 </html>

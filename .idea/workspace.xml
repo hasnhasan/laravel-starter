@@ -14,6 +14,25 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MediaManager" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -106,12 +125,15 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/netojose/laravel-bootstrap-4-forms" />
+      <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/plank/laravel-mediable" />
     </include_path>
   </component>
   <component name="ProjectId" id="1RsBM88gZ16XnwUlKXHqx5Vzu2W" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/partials" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Backend" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -119,11 +141,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/public/test" />
       <recent name="$PROJECT_DIR$/resources/views/backend" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Backend" />
+      <recent name="$PROJECT_DIR$/app/Models" />
+      <recent name="$PROJECT_DIR$/resources/views/backend/category" />
       <recent name="$PROJECT_DIR$/resources/views/backend/partials" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="$PROJECT_DIR$/resources/views/backend/layouts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -155,7 +181,8 @@
       <option name="presentableId" value="Default" />
       <updated>1570445872330</updated>
       <workItem from="1570445873441" duration="251000" />
-      <workItem from="1570454675709" duration="5897000" />
+      <workItem from="1570454675709" duration="28362000" />
+      <workItem from="1570546536231" duration="316000" />
     </task>
     <servers />
   </component>

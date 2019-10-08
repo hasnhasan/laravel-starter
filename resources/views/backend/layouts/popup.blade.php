@@ -25,24 +25,7 @@
     @stack('css')
 </head>
 <body>
-
-<aside class="aside aside-fixed">
-    <div class="aside-header">
-        <a href="index.html" class="aside-logo">dash<span>forge</span></a>
-        <a href="" class="aside-menu-link">
-            <i data-feather="menu"></i>
-            <i data-feather="x"></i>
-        </a>
-    </div>
-    <div class="aside-body">
-        @include('backend.partials.user-menu')
-        @include('backend.partials.menu')
-    </div>
-</aside>
-
 <div class="content ht-100v pd-0">
-    @include('backend.partials.top-bar')
-
     <div class="content-body @stack('content-body')">
         @yield('content')
     </div>
@@ -62,9 +45,6 @@
     });
 </script>
 <script src="{{asset('assets/js/dashforge.js')}}"></script>
-<script src="{{asset('assets/js/dashforge.aside.js')}}"></script>
-
-<!-- append theme customizer -->
 <script src="{{asset('assets/lib/js-cookie/js.cookie.js')}}"></script>
 @stack('js')
 </body>

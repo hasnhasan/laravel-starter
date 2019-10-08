@@ -9,10 +9,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "ext-gd": "*",
+        "ext-json": "*",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
+        "laravel/helpers": "^1.1",
         "laravel/tinker": "^1.0",
-        "netojose/laravel-bootstrap-4-forms": "^3.0"
+        "netojose/laravel-bootstrap-4-forms": "^3.0",
+        "plank/laravel-mediable": "^3.0"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
@@ -51,7 +55,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "App\\Providers\\EventServiceProvider::postAutoloadDump"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
