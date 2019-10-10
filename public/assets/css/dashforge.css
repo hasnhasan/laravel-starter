@@ -1125,7 +1125,9 @@ th {
 label {
   display: inline-block;
   margin-bottom: 0.5rem; }
-
+.form-group label {
+    display:block;
+}
 button {
   border-radius: 0; }
 
@@ -2227,7 +2229,7 @@ pre {
   .table-responsive > .table-bordered {
     border: 0; }
 
-.form-control {
+.form-control,.bootstrap-tagsinput {
   display: block;
   width: 100%;
   height: calc(1.5em + 0.9375rem + 2px);
@@ -2242,18 +2244,20 @@ pre {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .form-control {
+    .form-contro,.bootstrap-tagsinput {
       transition: none; } }
-  .form-control::-ms-expand {
+  .form-control::-ms-expand,.bootstrap-tagsinput::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus {
+  .form-control:focus,
+  .bootstrap-tagsinput:focus{
     color: #596882;
     background-color: #fff;
     border-color: #7cb2fe;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(1, 104, 250, 0.25); }
-  .form-control::placeholder {
+  .form-control::placeholder,
+  .bootstrap-tagsinput input::placeholder{
     color: #7987a1;
     opacity: 1; }
   .form-control:disabled, .form-control[readonly] {
@@ -3323,7 +3327,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  
+
   .btn-group-vertical > .btn,
   .ui-datepicker-buttonpane .btn-group-vertical > button,
   .sp-container .btn-group-vertical > button,
@@ -41078,3 +41082,5 @@ a.bg-twitter:hover, a.bg-twitter:focus, button.bg-twitter:hover, button.bg-twitt
 
 .wd-280 {
   width: 280px; }
+.media-browser img{max-height: 180px;overflow-y: hidden;}
+.img-select input:focus {box-shadow:none!important; }

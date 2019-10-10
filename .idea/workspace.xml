@@ -128,12 +128,14 @@
       <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/plank/laravel-mediable" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
     </include_path>
   </component>
   <component name="ProjectId" id="1RsBM88gZ16XnwUlKXHqx5Vzu2W" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Traits" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -141,15 +143,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/Utils" />
+      <recent name="$PROJECT_DIR$/app/Traits" />
+      <recent name="$PROJECT_DIR$/app/Utils/DataGrid" />
       <recent name="$PROJECT_DIR$/storage/app/public/test" />
-      <recent name="$PROJECT_DIR$/resources/views/backend" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Backend" />
-      <recent name="$PROJECT_DIR$/app/Models" />
-      <recent name="$PROJECT_DIR$/resources/views/backend/category" />
-      <recent name="$PROJECT_DIR$/resources/views/backend/partials" />
-      <recent name="$PROJECT_DIR$/resources/views/backend/layouts" />
+      <recent name="$PROJECT_DIR$/app/Traits" />
+      <recent name="$PROJECT_DIR$/resources/views/backend/media-manager" />
+      <recent name="$PROJECT_DIR$/app/Utils" />
+      <recent name="$PROJECT_DIR$/app/Providers" />
+      <recent name="$PROJECT_DIR$/resources/views/backend/article" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -182,22 +187,14 @@
       <updated>1570445872330</updated>
       <workItem from="1570445873441" duration="251000" />
       <workItem from="1570454675709" duration="28362000" />
-      <workItem from="1570546536231" duration="316000" />
+      <workItem from="1570546536231" duration="751000" />
+      <workItem from="1570606586972" duration="2576000" />
+      <workItem from="1570616114069" duration="10863000" />
+      <workItem from="1570631999406" duration="14950000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/backend/layouts/app.blade.php</url>
-          <line>58</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

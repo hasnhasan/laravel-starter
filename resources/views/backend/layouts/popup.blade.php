@@ -17,7 +17,6 @@
     <!-- vendor css -->
     <link href="{{asset('assets/lib/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/lib/jqvmap/jqvmap.min.css')}}" rel="stylesheet">
 
     <!-- DashForge CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/dashforge.css')}}">
@@ -34,7 +33,6 @@
 <script src="{{asset('assets/lib/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('assets/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('assets/lib/feather-icons/feather.min.js')}}"></script>
-<script src="{{asset('assets/lib/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         $.ajaxSetup({

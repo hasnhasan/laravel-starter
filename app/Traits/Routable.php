@@ -30,7 +30,7 @@ trait Routable
      */
     public function route()
     {
-        return $this->hasOne(DynamicRoute::class, 'parameter', 'id')->where('namespace', $this->frontNameSpace);
+        return $this->hasOne(DynamicRoute::class, 'parameter', 'id')->where('namespace', $this->frontNameSpace)->withDefault();
     }
 
     /**
@@ -54,8 +54,14 @@ trait Routable
      */
     public static function routeSave($item, $calledModel)
     {
-        $colum = $item->slugColum;
-        $slug  = checkSlug($item->$colum, $item->route_id);
+        $routeId = NULL;
+        if (isset($item->route->id)) {
+            $routeId = $item->route->id;
+        }
+
+        $slug = request()->input('route.slug', $item->{$item->slugColum});
+        $slug = checkSlug($slug, $routeId);
+
         #Prefix
         if (isset($item->slugPrefix) && $item->slugPrefix) {
             $prefix    = $item->slugPrefix.'/';
@@ -66,20 +72,14 @@ trait Routable
             $slug = $prefix.$slug;
         }
 
-        $route = DynamicRoute::findOrNew($item->route_id);
+        $route = DynamicRoute::findOrNew($routeId);
 
-        $route->namespace = $item->frontNameSpace;
-        $route->parameter = $item->id;
-        $route->slug      = $slug;
-        if (isset($item->title)) {
-            $route->title = $item->title;
-        }
-        if (isset($item->description)) {
-            $route->description = $item->description;
-        }
-        if (isset($item->keywords)) {
-            $route->keywords = $item->keywords;
-        }
+        $route->namespace   = $item->frontNameSpace;
+        $route->parameter   = $item->id;
+        $route->slug        = $slug;
+        $route->title       = request()->input('route.title');
+        $route->description = request()->input('route.description');
+        $route->keywords    = request()->input('route.keywords');
 
         try {
             $route->save();
@@ -116,36 +116,4 @@ trait Routable
         }
 
     }
-}
-
-/**
- * Slug başka bir içerikte kullanılıyormu kontrol eder
- *
- * @param $stringRaw
- * @param null $routeId
- * @param null $parameterId
- * @return string
- */
-function checkSlug($stringRaw, $routeId = NULL, $parameterId = NULL)
-{
-    $trueSlug = false;
-    $string   = str_replace('/', md5('/'), $stringRaw);
-    $i        = 2;
-    while (!$trueSlug) {
-        $slug = str_replace(md5('/'), '/', str_slug($string));
-        if ($parameterId) {
-            $slugData = DynamicRoute::select('slug')->where('parameter', '!=', $parameterId)->where('slug', $slug)->limit(1)->first();
-        } else {
-            $slugData = DynamicRoute::select('slug')->where('id', '!=', $routeId)->where('slug', $slug)->limit(1)->first();
-        }
-
-        if (!$slugData) {
-            $trueSlug = true;
-        } else {
-            $string = $stringRaw.' '.$i;
-            $i++;
-        }
-    }
-
-    return $slug;
 }

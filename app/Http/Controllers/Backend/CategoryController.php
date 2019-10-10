@@ -17,6 +17,6 @@ class CategoryController extends BackendController
     {
         $modulCategories = Category::whereNull('parent_id')->get()->groupBy('module');
 
-        return view('backend.category.list', compact('modulCategories'));
+        return view('backend::category.list', compact('modulCategories'));
     }
 }

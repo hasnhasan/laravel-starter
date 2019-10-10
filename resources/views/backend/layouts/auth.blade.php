@@ -11,7 +11,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/favicon.png')}}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title',config('app.name', 'Laravel'))</title>
 
     <!-- vendor css -->
     <link href="{{asset('assets/lib/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet">

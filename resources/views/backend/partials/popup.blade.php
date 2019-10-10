@@ -1,2 +1,2 @@
-@extends('backend.layouts.popup')
+@extends('backend::layouts.popup')
 @include($includeFile)

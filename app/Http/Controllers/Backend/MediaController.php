@@ -20,7 +20,7 @@ class MediaController extends BackendController
      */
     public function index(Request $request)
     {
-        return view('backend.media-manager.list');
+        return view('backend::media-manager.list');
     }
 
     /**
@@ -31,9 +31,13 @@ class MediaController extends BackendController
      */
     public function popup(Request $request)
     {
-        $includeFile = 'backend.media-manager.browser';
+        $includeFile     = 'backend::media-manager.browser';
+        $type            = $request->get('type');
+        $input           = $request->get('input');
+        $contentTitle    = $request->get('contentTitle');
+        $CKEditorFuncNum = $request->get('CKEditorFuncNum');
 
-        return view('backend.partials.popup', compact('includeFile'));
+        return view('backend::partials.popup', compact('includeFile', 'type', 'input', 'contentTitle', 'CKEditorFuncNum'));
     }
 
     /**
@@ -162,7 +166,7 @@ class MediaController extends BackendController
                     }
                 }
 
-                $fileAndFolder['result'][] = [
+                $data = [
                     'name'              => $file->getBasename(),
                     'dateModified'      => \Carbon\Carbon::parse($file->getMTime())->format('d/m/Y H:i:s'),
                     'isDirectory'       => $file->isDir(),
@@ -171,6 +175,10 @@ class MediaController extends BackendController
                     'mediaId'           => $mediaId,
                     'url'               => $mediaUrl,
                 ];
+                if ($request->get('popup') || $request->get('type')) {
+                    $data['thumbnail'] = $data['url'];
+                }
+                $fileAndFolder['result'][] = $data;
             }
 
             return response()->json($fileAndFolder);

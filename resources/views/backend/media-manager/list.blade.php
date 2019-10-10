@@ -1,3 +1,3 @@
-@extends('backend.layouts.app')
+@extends('backend::layouts.app')
 
-@include('backend.media-manager.browser')
+@include('backend::media-manager.browser')

@@ -29,7 +29,14 @@ Route::prefix('admin')->group(function() {
         Route::any('/media-manager/action', 'MediaController@mediaActions')->name('media-manager.action');
 
 
-        Route::any('/category', 'CategoryController@index')->name('category.list');
+        Route::any('/categories', 'CategoryController@index')->name('category.list');
+
+
+        Route::get('/articles/{module?}', 'ArticleController@index')->name('article.list');
+        Route::get('/article/create', 'ArticleController@createOrUpdateForm')->name('article.create');
+        Route::get('/article/{id?}', 'ArticleController@createOrUpdateForm')->name('article.update');
+        Route::post('/article/{idOrCreate}', 'ArticleController@createOrUpdate');
+        Route::delete('/articles', 'ArticleController@delete')->name('article.delete');
 
 
 
